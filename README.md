@@ -3,7 +3,7 @@ Dart API that provides sunset and sunrise times for a given latitude and longitu
 
 ## Getting started
 
-You should ensure that you add the dependency in your flutter project.
+You should ensure that you add the dependency in your project.
 ```yaml
 dependencies:
  sunrise_sunset: "^1.0.0"
