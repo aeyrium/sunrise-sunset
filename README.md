@@ -13,7 +13,7 @@ You should then run `flutter packages upgrade` or update your packages in Intell
 
 ## Parameters
 
- | Param         | Optional                                                | 
+ | Name          | Optional                                                | 
  |---------------|---------------------------------------------------------|
  | latitude      | No                                                      | 
  | longitude     | No                                                      | 
