@@ -1,4 +1,7 @@
 # Sunrise Sunset
+
+[![Codemagic build status](https://api.codemagic.io/apps/5d0016e38576910010eb9b42/5d0016e38576910010eb9b41/status_badge.svg)](https://codemagic.io/apps/5d0016e38576910010eb9b42/5d0016e38576910010eb9b41/latest_build)
+
 Dart API that provides sunset and sunrise times for a given latitude and longitude
 
 ## Getting started
