@@ -29,7 +29,8 @@ Import the file:
 import 'package:sunrise_sunset/sunrise_sunset.dart';
 ```
 
-There are two methods to get the results , one is `getResults` , Time values in response will be expressed following ISO 8601 and day_length will be expressed in seconds.
+There are two methods to get the results , one is `getResults`.
+Time values in response will be expressed following [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) and `day_length` will be expressed in seconds.
 
 ```
  final api = SunriseSunset();
