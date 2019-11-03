@@ -6,8 +6,7 @@ import 'package:http/http.dart' as http;
 import 'src/sunrise_sunset_response.dart';
 
 class SunriseSunset {
-  /// Get results from the Sunrise Sunset API ,
-  /// Time values in response will be expressed following ISO 8601 and day_length will be expressed in seconds
+  /// Get results from the Sunrise Sunset API for the given [date], [latitude], and [longitude].
   static Future<SunriseSunsetResponse> getResults({
     DateTime date,
     double latitude,
