@@ -1,5 +1,3 @@
-import 'package:meta/meta.dart';
-
 ///Options we use as params to the web service
 
 class Options {
@@ -16,8 +14,8 @@ class Options {
 
   Options({
     DateTime date,
-    @required double latitude,
-    @required double longitude,
+    double latitude,
+    double longitude,
     this.formatted = false,
   })  : this.date = date ?? DateTime.now(),
         this.latitude = _checkLatitude(latitude),
