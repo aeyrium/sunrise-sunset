@@ -10,3 +10,6 @@
 ## [1.0.2]
 
 * Updated CHANGELOG.md
+* Enhanced the README.md 
+* Added helpful graphic
+* Gave attribution to source REST API
