@@ -36,16 +36,9 @@ There are two methods to get the results , one is `getResults`.
 Time values in response will be expressed following [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) and `day_length` will be expressed in seconds.
 
 ```
- final api = SunriseSunset();
- final response = await api.getResults(date: DateTime.now(), latitude: 36.7201600, longitude: -4.4203400);
+ final response = await SunriseSunset.getResults(date: DateTime.now(), latitude: 36.7201600, longitude: -4.4203400);
 ```
 
-The second method is `getFormattedResults` , Time values in response will be formatted and expresed in `String`.
-
-```
- final api = SunriseSunset();
- final response = await api.getFormattedResults(latitude: 36.7201600, longitude: -4.4203400);
-```
 
 
 

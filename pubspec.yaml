@@ -1,6 +1,6 @@
 name: sunrise_sunset
 description: Dart API that provides sunset and sunrise times for a given latitude and longitude
-version: 1.0.0
+version: 1.0.1
 authors:
   - Aeyrium Inc. <build@aeyrium.com>
   - Diego Velásquez <diego.velasquez.lopez@gmail.com>
