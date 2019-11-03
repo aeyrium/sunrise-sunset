@@ -13,3 +13,7 @@
 * Enhanced the README.md 
 * Added helpful graphic
 * Gave attribution to source REST API
+
+## [1.0.3]
+
+* Updated README.md properties table

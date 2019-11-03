@@ -15,16 +15,6 @@ dependencies:
 
 You should then run `flutter packages upgrade` or update your packages in IntelliJ.
 
-## Parameters
-
- | Name          | Optional                                                | 
- |---------------|---------------------------------------------------------|
- | latitude      | No                                                      | 
- | longitude     | No                                                      | 
- | date          | Yes (If not present, date defaults to current date)     | 
-
-
-
 ## Usage
 
 Import the file:
@@ -38,8 +28,20 @@ To use simply call the static method `SunriseSunset.getResults(...)`.
 Time values in response will be expressed `Datetime` instances and `day_length` will be expressed in seconds.
 
 ```
- final response = await SunriseSunset.getResults(date: DateTime.now(), latitude: 36.7201600, longitude: -4.4203400);
+final response = await SunriseSunset.getResults(date: DateTime.now(), latitude: 36.7201600, longitude: -4.4203400);
 ```
+
+### Parameters
+
+Here is a list of supported parameters to use in the `SunriseSunset.getResults()` method
+
+ | Name          | Optional                                                | 
+ |---------------|---------------------------------------------------------|
+ | latitude      | No                                                      | 
+ | longitude     | No                                                      | 
+ | date          | Yes (If not present, date defaults to current date)     | 
+
+
 
 
 
