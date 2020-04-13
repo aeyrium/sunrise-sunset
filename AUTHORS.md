@@ -1,0 +1,2 @@
+- Aeyrium Inc. <build@aeyrium.com>
+- Diego Velásquez <diego.velasquez.lopez@gmail.com>
