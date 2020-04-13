@@ -2,7 +2,7 @@ name: sunrise_sunset
 description: Dart API that provides sunset and sunrise times for a given latitude and longitude
 version: 1.0.4
 
-homepage: https://aeyrium.com/
+homepage: https://aeyrium.com/products/mxtracker/
 repository: https://github.com/aeyrium/sunrise-sunset
 
 environment:
