@@ -17,3 +17,7 @@
 ## [1.0.3]
 
 * Updated README.md properties table
+
+## [1.0.4]
+
+* Bug with Date param fixed
