@@ -18,7 +18,8 @@ class SunriseSunset {
         host: 'api.sunrise-sunset.org',
         path: '/json',
         queryParameters: {
-          'date': date ?? 'today',
+          'date':
+              date != null ? "${date.year}-${date.month}-${date.day}" : 'today',
           'lat': latitude.toString(),
           'lng': longitude.toString(),
           'formatted': '0'

@@ -27,4 +27,12 @@ void main() {
       expect(response.error.contains("lat"), true);
     },
   );
+
+  test('Test all values', () async {
+    var response = await SunriseSunset.getResults(
+        date: DateTime.now().toLocal(),
+        latitude: 39.001735,
+        longitude: -119.752744);
+    print(response);
+  });
 }
