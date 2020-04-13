@@ -1,68 +1,20 @@
-name: Test, Analysis
+name: Package Publish dry-run
+
 on:
   push:
     branches: [ dev ]
 
 jobs:
 
-  check_version:
-    runs-on: ubuntu-latest
-    name: 'Check Version Tag'
-    steps:
-      - uses: actions/checkout@v1
-      - name: 'Get Latest Version'
-        id: previoustag
-        uses: "WyriHaximus/github-action-get-previous-tag@master"
-        env:
-          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-        continue-on-error: true  
-      - name: 'Print Latest Version'
-        run: echo ${{ steps.previoustag.outputs.tag }}
-      - name: 'Get New Version'
-        id: config
-        uses: CumulusDS/get-yaml-paths-action@v0.0.3
-        with:
-          file: pubspec.yaml
-          version_name: version
-      - name: 'Print New Version'
-        run: echo ${{ steps.config.outputs.version_name }}  
-      - name: 'Compare versions'
-        if: steps.config.outputs.version_name == steps.previoustag.outputs.tag
-        run: |
-            echo 'The version from your pubspec.yaml is the same as Master, Please update the version'
-            exit 1
-          
-  run_tests:
-    needs: [check_version]
-    name: 'Run Tests'
+  dry-run:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-java@v1
+      - name: 'Checkout'
+        uses: actions/checkout@v1
+      - name: 'Dry-run'
+        uses: ilteoood/actions-flutter-pub-publisher@master
         with:
-          java-version: '12.x'
-      - uses: subosito/flutter-action@v1
-        with:
-          channel: 'stable'
-      - run: flutter pub get
-      # run  flutter widgets tests  and unit tests
-      - run: flutter test --coverage
-      # Upload coverage reports to Codecov
-      # https://github.com/marketplace/actions/codecov
-      - name: 'Upload coverage to Codecov'
-        if: success()
-        uses: codecov/codecov-action@v1
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
-          file: coverage/lcov.info
-
-  package-analysis:
-    needs: [run_tests]
-    name: 'Run Analysis'
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: axel-op/dart-package-analyzer@stable
-        with:
-          # Required:
-          githubToken: ${{ secrets.GITHUB_TOKEN }}
+          credential: ${{secrets.CREDENTIAL_JSON}}
+          flutter_package: true
+          skip_test: true
+          dry_run: true
