@@ -11,9 +11,9 @@ void main() {
       expect(response.success, true);
       expect(response.error, isEmpty);
       expect(response.data, isNotNull);
-      expect(response.data.dayLength, 37608);
+      expect(response.data.dayLength, 47525);
       expect(response.data.astronomicalTwilightEnd,
-          DateTime.parse("2019-11-04T02:26:30+00:00"));
+          DateTime.parse("2020-04-14T04:10:06+00:00"));
     },
   );
 
