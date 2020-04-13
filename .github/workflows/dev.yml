@@ -27,7 +27,7 @@ jobs:
       - name: 'Print New Version'
         run: echo ${{ steps.config.outputs.version_name }}  
       - name: 'Compare versions'
-        if: steps.config.outputs.version_name != steps.previoustag.outputs.tag
+        if: steps.config.outputs.version_name == steps.previoustag.outputs.tag
         run: |
             echo 'The version from your pubspec.yaml is the same as Master, Please update the version'
             exit 1
